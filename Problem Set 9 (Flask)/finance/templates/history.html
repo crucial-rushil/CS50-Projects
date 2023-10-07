@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <h1>Transaction History</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Date</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for stock in new_portfolio %}
+            <tr>
+                <td>{{stock["stock"]}}</td>
+                <td>{{stock["name"]}}</td>
+                <td>{{stock["shares"]}}</td>
+                <td>{{stock["price"]}}</td>
+                <td>{{stock["date"]}}</td>
+
+
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>{{cash}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+{% endblock %}

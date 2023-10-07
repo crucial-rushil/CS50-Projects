@@ -1,0 +1,10 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+    <p>A share of <p value="{{information["name"]}}">{{information["name"]}}</p> <p value="{{information["symbol"]}}">{{information["symbol"]}}</p> costs <p value="{{information["price"]}}">{{(information["price"])|usd}}</p>.</p>
+
+{% endblock %}
