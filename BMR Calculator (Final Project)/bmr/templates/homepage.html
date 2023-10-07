@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Homepage
+{% endblock %}
+
+{% block main %}
+
+    <center><h1>Welcome to the BMR Calculator</h1></center>
+    <div class="row gx-3 gy-3">
+        <div class="col p-3">
+          <p>The BMR Calculator stands for Basal Metabolic Rate aka BMR for short. The purpose of Basal Metabolic Rate is to calculate the amount of energy
+          utilized by the body while at rest. Typically Basal Metabolic Rates are calculated during a period of fasting - a minimum of 12 hours without food consumption -
+          and it occurs when the digestive system is at rest. There are severeal factors that we will discuss below which impact your BMR. This includes age, height, sex
+          and weight.</p>
+        </div>
+        <div class="col p-3">
+          <img id = "BMI1" class = "rounded" src="https://res.cloudinary.com/grohealth/image/upload/f_auto,fl_lossy,q_auto/v1583924873/DCUK/Content/iStock-936175552.jpg">
+        </div>
+    </div>
+
+    <center><h2>Factors that Affect BMR</h2></center>
+
+    <div class="row gy-3">
+        <div class="col order-last p-3">
+          <h2>Gender</h2>
+          <p>Typically men have higher basal metabolic rate than women. This is because men tend to have more muscle and a larger body size.
+          With higher muscle and body mass. Those with more muscle and body mass have a higher Basal Metabolic Rate since they typically have larger organs and more fluid volume to
+          maintain.</p>
+        </div>
+        <div class="col order-first p-3">
+          <h2>Age</h2>
+          <p>During childhood children experience extreme rates of metabolism. This is because as they grow they increase in body size which further increases metabolism.
+          During adulthood, however, the BMR begins to decrease as humans experience hormonal and neurological changes.</p>
+        </div>
+        <div class="col p-3">
+          <h2>Height & Weight</h2>
+          <p>Height and Weight are large factors of the Basal Metabolic Rate as well. A taller person would have a higher BMR than that of a short person. This is because
+          a taller person would have a larger surface area; larger organs; etc which requires more energy to sustain the body. Weight also affects BMR as well. Objects with larger weights
+          tend to have higher mass (assuming they are all on Earth where the acceleration due to gravity is held constant). This means that people that weigh heavier tend to have a higher BMR since
+          they have increased lean mass.</p>
+        </div>
+    </div>
+
+    <center><h2>How BMR is calculated</h2></center>
+
+    <div class="row gx-3 gy-3">
+        <div class="col p-4">
+          <center><p class="p-2">There are two formulas used to calculate BMR. The formulas are distinct by gender - meaning that there is one formula to calculate BMR for men and another for female.
+          </p></center>
+        </div>
+        <div class="col p-3">
+          <p>The formula to calculate BMR for men is as follows: 66.47 + (13.75 * weight [kg]) + (5.003 * size [cm]) − (6.755 * age [years])</p>
+          <p>The formula to calculate BMR for women is as follows: 655.1 + (9.563 * weight [kg]) + (1.85 * size [cm]) − (4.676 * age [years])</p>
+        </div>
+    </div>
+
+      <div class = "alt">
+        {% if not session.user_id %}
+          <center><h2>Log in to calculate your BMR along with health recommendations!</h2></center>
+          <div class="d-grid gap-2">
+            <a href='/register'><button class="btn btn-primary" type="button">Register</button></a>
+            <a href='/login'><button class="btn btn-primary" type="button">Login</button></a>
+          </div>
+
+        {% else %}
+          <center><h2>Navigation</h2></center>
+          <div class="d-grid gap-2">
+            <a href='/logout'><button class="btn btn-primary" type="button">Sign Out</button></a>
+            <a href='/calculate'><button class="btn btn-primary" type="button">Calculate</button></a>
+            <a href='/user'><button class="btn btn-primary" type="button">History</button></a>
+          </div>
+
+        {% endif %}
+      </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+    <center><h1>History</h1></center>
+    <div class="row gx-3 gy-3">
+        <div class="col p-3">
+          <center><p>Your most recently calculated BMR is {{BMR["BMR"]}} calories</p></center>
+        </div>
+    </div>
+    <!--- Line Chart tutorial: https://www.youtube.com/watch?v=E2hytuQvLlE-->
+    <canvas id="lineChart" width="900" height="400"></canvas>
+      <script>
+        var ctx = document.getElementById("lineChart").getContext("2d");
+        var lineChart = new Chart(ctx, {
+          type: "line",
+          data: {
+            labels: {{labels | safe}},
+            datasets: [
+              {
+                label: "BMR (calories)",
+                data: {{values | safe}},
+                borderColor: "rgb(201, 71, 38)",
+                lineTension: 0.2,
+                fill: false
+              }
+              ]
+          }
+        });
+      </script>
+
+      <div class = "alt">
+        {% if not session.user_id %}
+          <center><h2>Log in to calculate your BMR along with health recommendations!</h2></center>
+          <div class="d-grid gap-2">
+            <a href='/register'><button class="btn btn-primary" type="button">Register</button></a>
+            <a href='/login'><button class="btn btn-primary" type="button">Login</button></a>
+          </div>
+
+        {% else %}
+          <center><h2>Navigation</h2></center>
+          <div class="d-grid gap-2">
+            <a href='/logout'><button class="btn btn-primary" type="button">Sign Out</button></a>
+            <a href='/calculate'><button class="btn btn-primary" type="button">Calculate</button></a>
+            <a href='/user'><button class="btn btn-primary" type="button">History</button></a>
+          </div>
+
+        {% endif %}
+      </div>
+
+
+
+
+
+{% endblock %}
