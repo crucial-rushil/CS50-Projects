@@ -1,0 +1,12 @@
+sort1 uses: Bubble Sort
+
+How do you know?: Sort1 has inefficient times on a reversed and random list, but very efficient times on a sorted list. This indicates that it follows n^2 as the worst run-time but n as the best possible run-time.
+
+sort2 uses: Merge Sort
+
+How do you know?: It is the efficient sorting alogrithm out of the three. Sort2 has the fastest run-times on all the lists provided which includes reversed, sorted, and random.
+
+sort3 uses: Selection Sort
+
+How do you know?: Sort3 is selection sort. This is because it has highly inefficient run-times on all test cases. On a sorted list, it has a highly ineffcient runtime too. This means that sort3 is not bubble sort. Since it
+// has very inefficeint run-times, it also rules out the possibility that it's Merge Sort. Therefore, it is selection sort.
