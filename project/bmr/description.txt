@@ -1,0 +1,3 @@
+this project will be about making a website for your health.
+the goal of the website will be to have users log in and then enter their bmi and such
+then it will be calcuated and recommendations will be provided based on what their bmi was
