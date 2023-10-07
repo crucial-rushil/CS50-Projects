@@ -1,0 +1,86 @@
+
+
+.wright{
+margin: 0% 0% 27% 0%;}
+
+.lefta {
+float: left;
+width: 38%;
+margin: 0% 0% 0% 2%;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.righta{
+float: right;
+width: 40%;
+margin: 0% 2% 0% 0%;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+
+.warplane1{
+float: left;
+width: 50%;
+font-size: 130%;
+font-style: italic;
+font-family: Georgia, Times, serif;
+margin: 2% 5% 2% 2%;
+padding: 10px;
+border-top: 4px solid #665544;
+border-bottom: 4px solid #665544;
+border-left: 4px solid #665544;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+
+}
+
+.trial{
+float: right;
+width: 50%;
+font-size: 130%;
+font-style: italic;
+font-family: Georgia, Times, serif;
+margin: 0px 5% 2% 2%;
+padding: 10px;
+border-top: 4px solid #665544;
+border-bottom: 4px solid #665544;
+border-right: 4px solid #665544;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.trial2{
+float: right;
+width: 50%;
+font-size: 130%;
+font-style: italic;
+font-family: Georgia, Times, serif;
+margin: 0px 5% 2% 2%;
+padding: 10px;
+border-top: 4px solid #665544;
+border-bottom: 4px solid #665544;
+border-right: 4px solid #665544;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+}
+
+.directory{
+float: left;
+width: 50%;
+font-size: 130%;
+font-style: italic;
+font-family: Georgia, Times, serif;
+margin: 2% 10% 2% 25%;
+padding: 10px;
+border-top: 1px solid #665544;
+border-bottom: 1px solid #665544;
+border-right: 1px solid #665544;
+border-left: 1px solid #665544;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+display: inline-block;
+align-items: center;
+justify-content: center;
+}

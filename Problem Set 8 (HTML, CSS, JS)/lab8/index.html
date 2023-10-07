@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            function incorrect(identity)
+            {
+                let element = document.getElementById(identity);
+                element.style.backgroundColor = "red";
+
+                let good = document.getElementById("congrats");
+                let bad = document.getElementById("nope")
+                bad.style.visibility = "visible";
+                good.style.visibility = "hidden";
+            }
+
+            function correct(identity)
+            {
+                let element = document.getElementById(identity);
+                element.style.backgroundColor = "green";
+
+                let good = document.getElementById("congrats");
+                let bad = document.getElementById("nope")
+                good.style.visibility = "visible";
+                bad.style.visibility = "hidden";
+            }
+
+            function frq()
+            {
+                let answer = document.getElementById("name").value;
+                let form_id = document.getElementById("name");
+
+                if (answer == "Drake" || answer == "drake")
+                {
+                    form_id.style.backgroundColor = "green";
+                    document.getElementById("status").innerHTML = "Correct!"
+                }
+
+                else
+                {
+                    form_id.style.backgroundColor = "red";
+                    document.getElementById("status").innerHTML = "Wrong!"
+                }
+            }
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What is the capital of California?</h3>
+                <button id = "1" type="button" onclick="incorrect(1)">Los Angeles</button>
+                <button id = "2" type="button" onclick="incorrect(2)">San Jose</button>
+                <button id = "3" type="button" onclick="correct(3)">Sacramento</button>
+                <button id = "4" type="button" onclick="incorrect(4)">San Francisco</button>
+
+                <p id = "congrats">Correct!</p>
+                <p id = "nope" >Incorrect!</p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+
+                <!-- TODO: Add free response question here -->
+                <h3>What is the commonly known name of the rapper whose instagram handle is Champagne Papi?</h3>
+                <form id = "ye" onsubmit="frq(); return false;">
+                    <input autocomplete="off" placeholder="Name" id="name" type="text">
+                    <input type="submit">
+                </form>
+
+                <p id = "status"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>
