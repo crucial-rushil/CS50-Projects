@@ -1,0 +1,2 @@
+ask user for the column height 
+user for loop to make it 
